@@ -119,8 +119,6 @@ def main() -> None:
         search_script = (
             '<script defer src="search.js"></script>'
             '<script defer src="app.js"></script>'
-            if html_name == "index.html"
-            else ""
         )
         search_box = (
             '<section id="search">'
@@ -129,8 +127,6 @@ def main() -> None:
             '<button type="button" id="search-button">Search</button>'
             '<div id="search-results"></div>'
             "</section>"
-            if html_name == "index.html"
-            else ""
         )
         html = page_template(title, active, body, search_script, search_box)
         (SITE / html_name).write_text(html, encoding="utf-8")
